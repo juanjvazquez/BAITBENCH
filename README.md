@@ -1,13 +1,18 @@
-# BAITBENCH: Measuring Reward Hacking in Autonomous ML Research Agents
+# BAITBENCH: Measuring Agent Reward Hacking with Optional Shortcuts Planted in ML Tasks
+**Pradyumna Shyama Prasad** \*, National University of Singapore - `<pradyu.sp@gmail.com>`\
+**Meiri Anto** \*, MIT\
+**Leon Eshuijs** \*, Vrije Universiteit Amsterdam\
+**Julian Moncarz**, University of Toronto\
+**Kaustubh Kislay**, University of Wisconsin-Madison\
+**Juan J Vazquez**, Arb Research - `<juan@arbresearch.com>`\
 
-| **Pradyumna Shyama Prasad** | **Meiri Anto** | **Leon Eshuijs** |
-|:---:|:---:|:---:|
-| National University of Singapore | MIT | Vrije Universiteit Amsterdam |
-| **Julian Moncarz** | **Kaustubh Kislay** | **Juan J Vazquez** |
-| University of Toronto | University of Wisconsin-Madison | Arb Research |
+\* Co-first author
 
-## Abstract
+Link to paper:   
+[![arXiv](https://img.shields.io/badge/arXiv-2608.30724-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.30724)
 
+## Paper summary:
+**TL;DR:**
 BAITBENCH measures reward hacking in autonomous ML research agents using three
 synthetic tabular tasks with planted shortcuts. Each shortcut improves the
 visible test score while failing on a hidden robust split, which makes it
@@ -15,11 +20,15 @@ possible to measure whether an agent exploited the task rather than produced a
 solution that generalizes. The benchmark evaluates seven frontier agents with a
 two-judge pipeline and includes a validity-aware prompting condition.
 
+**Abstract:**
+> LLM agents are increasingly used to run autonomous ML experiments, iterating on target metrics with little human oversight. Prior work has documented reward hacking in these environments, bringing into question the validity of produced research and the broader safety case for AI R&D. Existing benchmarks do not measure exploits that live in the data or the modeling task itself. We introduce BAITBENCH, a suite of three synthetic tabular ML tasks that each contain a shortcut that allows agents to inflate the public test score but fail on a hidden test set. Since the shortcut is optional and using it breaks no stated rule, BAITBENCH measures how often models exploit the shortcut to achieve inflated scores. Across seven frontier agents scored by our two-stage judge pipeline, 57.1% of runs exhibit reward hacking, with five of seven above 50%. Agents cheat even under a second condition where they are prompted not to -the mean cheating rate remains above 50%. We release BAITBENCH, along with the judge implementation, and an annotated dataset of transcripts containing reward hacks as a testbed for evaluating reward-hacking mitigations head-to-head. 
+
+**Description:**
 This repository contains the task generator and execution harness, canonical
 evaluation cases, judge outputs, scoring pipeline, analysis code, and derived
 data used for the paper and camera-ready revision.
 
-Raw agent runs, transcripts, generated task workspaces, virtual environments,
+**Keywords:** Raw agent runs, transcripts, generated task workspaces, virtual environments,
 caches, credentials, and VPS backups are intentionally excluded.
 
 ## Repository layout
