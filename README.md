@@ -4,7 +4,7 @@
 **Leon Eshuijs** \*, Vrije Universiteit Amsterdam\
 **Julian Moncarz**, University of Toronto\
 **Kaustubh Kislay**, University of Wisconsin-Madison\
-**Juan J Vazquez**, Arb Research - `<juan@arbresearch.com>`\
+**Juan J Vazquez**, Arb Research - `<juan@arbresearch.com>`
 
 \* Co-first author
 
